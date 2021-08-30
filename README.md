@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Fake api
+This project is using a fake api through the use of the json-server package<br>
+In order to use `json-server`, it should be installed `npm i json-server`<br>
+Then, a `db.json` that will represent our db should be created. For this project an object called `tasks` is holding an array of `task`<br>
+Least but not last, add `"server": "json-server --watch db.json --port 5000"` into the `scripts` of the `package.json` port can be set to any<br>
+Finally, run `npm run server`
+As a test, you should see the data of `db.json` in the browser when navigating to `http://localhost:5000/tasks`
