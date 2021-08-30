@@ -1,0 +1,13 @@
+<!-- adding a green vertical bar if the reminder is true -->
+<!-- [ngClass]="{ reminder: task.reminder}"-->
+
+<div [ngClass]="{ reminder: task.reminder}" class="task" (dblclick)="onToggle(task)">
+  <h3>{{ task.text }}
+    <fa-icon
+      (click)="onClickDelete(task)"
+      [ngStyle]="{'color': 'red'}"
+      [icon]="faTimes">
+    </fa-icon>
+  </h3>
+  <p>{{ task.day }}</p>
+</div>
