@@ -1,9 +1,10 @@
 <header>
   <h1>{{title}}</h1>
+  <!--instead of setting one color, we change the color based on the action of the user-->
   <app-button
 
-    color="green"
-    text="add"
+    color="{{showTaskTracker ? 'red' : 'green'}}"
+    text="{{showTaskTracker ? 'Close' : 'Add'}}"
     (btnClick)="toggleAddTask()">
   </app-button>
 </header>
