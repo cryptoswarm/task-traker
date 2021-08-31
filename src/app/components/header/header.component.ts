@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { Subscription } from 'rxjs';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,8 @@ export class HeaderComponent implements OnInit {
   subscription!: Subscription;
 
   //inject the uiservice so we can use its methods
-  constructor(private uiService: UiService) {
+  //Router should be injected as well as a provider
+  constructor(private uiService: UiService, private router: Router) {
     this.subscription = this.uiService
       .onToggle()
       .subscribe((value) => (this.showTaskTracker = value));
@@ -26,6 +28,11 @@ export class HeaderComponent implements OnInit {
   toggleAddTask(){
     //console.log('toggle')
     this.uiService.toggleAddTask();
+  }
+
+  //we should add *ngIf="hasRoute('/')" in the html file, so add button will be shown only on the home page not the about neither the footer
+  hasRoute(route: string): boolean {
+    return this.router.url === route;
   }
 
 }
