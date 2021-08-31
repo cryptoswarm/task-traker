@@ -23,6 +23,12 @@
       "day": "Wednesday 15:30",
       "reminder": false,
       "id": 4
+    },
+    {
+      "text": "covid vax 2",
+      "day": "Tuesday 11:35",
+      "reminder": true,
+      "id": 5
     }
   ]
 }
