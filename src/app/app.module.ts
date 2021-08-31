@@ -12,6 +12,7 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 //for the home or index path is empty string which is connected to the component of TasksComponents
 const appRoutes: Routes = [
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
     TaskItemComponent,
     AddTaskComponent,
     AboutComponent,
+    FooterComponent,
   ],
   imports: [ //imports are for modules
     BrowserModule,
