@@ -35,4 +35,10 @@ export class TasksComponent implements OnInit {
     this.taskService.updateTaskReminder(task).subscribe(); //update the reminder status on the server
   }
 
+  addTask(task: Task) : void {
+    //console.log(task);
+    this.taskService.addTask(task).subscribe((task) => (
+      this.tasks.push(task)));
+  }
+
 }
